@@ -81,8 +81,10 @@ Engleski ali u MenuBar imamo MenuItem Language gdje imamo mogucnost mijenjanja j
 Engleskog jezika imamo Bosanski jezik.
 
 ## Maven
-Uvedene su sqlite-jdbc, jasperreports I testfx-junit.
-![image](https://user-images.githubusercontent.com/96090279/235447246-29c5beb4-774c-4032-a0ce-6c0c2883b955.png)
+Uvedene su sqlite-jdbc, jasperreports I testfx-junit. \\ 
+
+![image](https://user-images.githubusercontent.com/96090279/235447373-8c61e4f5-64d1-4e39-82a3-e35d71fba363.png)
+\\
 
 Admin
 username: mehomehic
