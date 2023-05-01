@@ -1,0 +1,9 @@
+#btnLogIn {
+    -fx-background-color: #a6d4fa;
+}
+.fieldCorrect {
+    -fx-border-color: #81c784;
+}
+.fieldIncorrect {
+    -fx-border-color: #f6a5c0;
+}

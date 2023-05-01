@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane hgap="20.0" prefHeight="700.0" prefWidth="1010.0" vgap="8.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <stylesheets>
+      <URL value="@/css/search.css" />
+   </stylesheets>
+   <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="762.0" minWidth="10.0" prefWidth="165.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints maxHeight="15.0" minHeight="13.0" prefHeight="13.0" />
+      <RowConstraints maxHeight="152.0" minHeight="0.0" prefHeight="36.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="276.0" minHeight="0.0" prefHeight="24.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="310.0" minHeight="0.0" prefHeight="17.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="339.0" minHeight="0.0" prefHeight="22.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="344.0" minHeight="0.0" prefHeight="2.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="460.0" minHeight="10.0" prefHeight="174.0" />
+      <RowConstraints maxHeight="288.0" minHeight="5.0" prefHeight="286.0" />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <Label fx:id="main" prefHeight="17.0" prefWidth="979.0" text="%main" GridPane.columnSpan="3">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label fx:id="info" prefHeight="17.0" prefWidth="1016.0" text="%info" GridPane.columnSpan="3" GridPane.rowIndex="1" />
+      <Label text="%date" GridPane.rowIndex="3" />
+      <DatePicker fx:id="choiceDate" prefHeight="25.0" prefWidth="200.0" GridPane.rowIndex="4" />
+      <Label GridPane.columnIndex="1" GridPane.rowIndex="3" />
+      <ComboBox fx:id="choiceTypeVehicle" prefHeight="25.0" prefWidth="200.0" promptText="%vehicle_type" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+    <Button fx:id="btnSearch2" mnemonicParsing="false" onAction="#clickSearch" prefHeight="25.0" prefWidth="206.0" text="%search" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+      <ComboBox fx:id="choiceCustomer" prefWidth="200.0" promptText="%customer" GridPane.rowIndex="2" />
+      <TableView fx:id="tableView" prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="3" GridPane.rowIndex="6" GridPane.rowSpan="2">
+        <columns>
+          <TableColumn fx:id="colDateOfInspection" prefWidth="107.0" text="%scheduled_for" />
+            <TableColumn fx:id="colCustomer" prefWidth="110.0" text="%customer" />
+          <TableColumn fx:id="colVehicle" prefWidth="183.0" text="%vehicle" />
+            <TableColumn fx:id="colStatusOfTechnicalInspection" minWidth="0.0" prefWidth="76.0" text="%status" />
+            <TableColumn fx:id="colEmployees" prefWidth="493.0" text="%employees" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnSave" mnemonicParsing="false" onAction="#clickSave" prefHeight="30.0" prefWidth="30.0" GridPane.columnIndex="2" GridPane.rowIndex="3" GridPane.rowSpan="2" />
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</GridPane>

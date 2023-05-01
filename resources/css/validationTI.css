@@ -1,0 +1,29 @@
+.valid {
+    -fx-border-color: #81c784;
+}
+.nonvalid {
+    -fx-border-color: #f6a5c0;
+}
+#btnPrijava {
+    -fx-background-color: #a6d4fa;
+}
+#btnContinue {
+    -fx-background-color: #a6d4fa;
+}
+#btnOk {
+    -fx-background-color: #a6d4fa;
+}
+#btnIspravno {
+        -fx-border-color: rgba(0, 0, 0, 0.12);
+        -fx-border-width: 1;
+        -fx-background-radius: 0;
+        -fx-background-color: #4caf50;
+        -fx-text-fill: rgba(0, 0, 0, 0.87);
+}
+#btnNeispravno {
+        -fx-border-color: rgba(0, 0, 0, 0.12);
+        -fx-border-width: 1;
+        -fx-background-radius: 0;
+        -fx-background-color: #f44336;
+        -fx-text-fill: rgba(0, 0, 0, 0.87);
+}

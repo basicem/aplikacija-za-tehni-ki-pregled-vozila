@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane hgap="20.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="574.0" prefWidth="943.0" vgap="8.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <stylesheets>
+      <URL value="@/css/validationTI.css" />
+   </stylesheets>
+   <columnConstraints>
+      <ColumnConstraints maxWidth="284.0" minWidth="200.0" prefWidth="284.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="361.0" minWidth="116.0" prefWidth="361.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="335.0" minWidth="177.0" prefWidth="209.0" />
+      <ColumnConstraints maxWidth="0.0" minWidth="0.0" prefWidth="0.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints maxHeight="20.0" minHeight="20.0" prefHeight="20.0" />
+      <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" />
+      <RowConstraints />
+      <RowConstraints maxHeight="312.0" minHeight="205.0" prefHeight="205.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="129.0" minHeight="0.0" prefHeight="8.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="214.0" minHeight="8.0" prefHeight="59.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="215.0" minHeight="24.0" prefHeight="138.0" />
+   </rowConstraints>
+   <children>
+      <ButtonBar prefHeight="92.0" prefWidth="420.0" GridPane.columnSpan="3" GridPane.rowIndex="8">
+        <buttons>
+          <Button fx:id="btnContinue" mnemonicParsing="false" onAction="#clickContinue" prefHeight="25.0" prefWidth="218.0" text="%continue" />
+        </buttons>
+         <padding>
+            <Insets right="20.0" />
+         </padding>
+      </ButtonBar>
+      <CheckBox fx:id="newVehicle" mnemonicParsing="false" onAction="#actionNewVehicle" prefHeight="17.0" prefWidth="201.0" text="%new" GridPane.rowIndex="2" />
+      <Separator prefWidth="200.0" GridPane.columnSpan="3" GridPane.rowIndex="3" />
+      <Separator prefWidth="200.0" GridPane.columnSpan="3" GridPane.rowIndex="6" />
+      <Label fx:id="l1" prefHeight="17.0" prefWidth="916.0" text="%first_part" GridPane.columnSpan="3" GridPane.rowIndex="1" />
+      <Label fx:id="main" prefHeight="20.0" prefWidth="916.0" text="%main" GridPane.columnSpan="3">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <GridPane fx:id="gridNew" hgap="20.0" prefHeight="235.0" prefWidth="933.0" vgap="8.0" GridPane.columnSpan="4" GridPane.rowIndex="5">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="24.0" minHeight="10.0" prefHeight="16.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="42.0" minHeight="10.0" prefHeight="28.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="25.0" minHeight="10.0" prefHeight="19.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="45.0" minHeight="10.0" prefHeight="24.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="53.0" minHeight="1.0" prefHeight="11.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="53.0" minHeight="8.0" prefHeight="16.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="59.0" minHeight="10.0" prefHeight="22.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="64.0" minHeight="10.0" prefHeight="18.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="%type" />
+            <ChoiceBox fx:id="choiceVehicleType" prefHeight="25.0" prefWidth="220.0" GridPane.rowIndex="1" />
+            <Label text="%brand" GridPane.rowIndex="2" />
+            <ChoiceBox fx:id="choiceVehicleBrand" prefHeight="25.0" prefWidth="221.0" GridPane.rowIndex="3" />
+            <Label text="%model" GridPane.rowIndex="5" />
+            <ChoiceBox fx:id="choiceVehicleModel" prefHeight="25.0" prefWidth="218.0" GridPane.rowIndex="6" />
+            <Label text="%year" GridPane.columnIndex="1" />
+            <TextField fx:id="fldYearOfManufacture" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label text="%registration" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="fldRegistration" promptText="X00-X-000" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label fx:id="fldWrongRegistration" prefHeight="17.0" prefWidth="202.0" text="%wrong_registration" textFill="#e57373" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label text="%vin_number" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <TextField fx:id="fldVINNumber" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <Label fx:id="fldWrongVIN" prefHeight="17.0" prefWidth="202.0" text="%wrong_vin" textFill="#e57373" GridPane.columnIndex="1" GridPane.rowIndex="7">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label text="%color_choice" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.columnIndex="2" GridPane.columnSpan="3" GridPane.rowIndex="3">
+               <children>
+                  <CheckBox fx:id="choiceWhite" mnemonicParsing="false" onAction="#clickWhite" text="%white" />
+                  <CheckBox fx:id="choiceBlack" mnemonicParsing="false" onAction="#clickBlack" text="%black" />
+                  <CheckBox fx:id="choiceGray" mnemonicParsing="false" onAction="#clickGray" text="%gray" />
+                  <CheckBox fx:id="choiceBrown" mnemonicParsing="false" onAction="#clickBrown" text="%brown" />
+                  <CheckBox fx:id="choiceRed" mnemonicParsing="false" onAction="#clickRed" text="%red" />
+               </children>
+            </HBox>
+            <Label fx:id="noColor" text="%no_color" textFill="#e57373" GridPane.columnIndex="2" GridPane.rowIndex="4">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label text="%color_type" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+            <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.columnIndex="2" GridPane.columnSpan="3" GridPane.rowIndex="6">
+               <children>
+                  <RadioButton fx:id="rbRegular" mnemonicParsing="false" onAction="#clickRegular" text="%regular" />
+                  <RadioButton fx:id="rbMetalic" mnemonicParsing="false" onAction="#clickMetalic" text="%metalic" />
+                  <RadioButton fx:id="rbFolio" mnemonicParsing="false" onAction="#clickFolio" text="%folio" />
+               </children>
+            </HBox>
+            <Label fx:id="noColorType" text="%no_type" textFill="#e57373" GridPane.columnIndex="2" GridPane.rowIndex="7">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+         </children>
+      </GridPane>
+      <GridPane fx:id="gridOld" prefHeight="96.0" prefWidth="284.0" GridPane.rowIndex="7">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="41.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="98.0" minHeight="10.0" prefHeight="46.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label fx:id="lVozila" prefHeight="17.0" prefWidth="204.0" text="%vehicle" />
+            <ChoiceBox fx:id="choiceVehicle" prefHeight="25.0" prefWidth="204.0" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="-10.0" top="20.0" />
+   </padding>
+</GridPane>

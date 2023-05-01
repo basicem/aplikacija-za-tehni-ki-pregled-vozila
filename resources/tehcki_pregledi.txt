@@ -1,0 +1,5 @@
+2022-02-02:Ivo:Ivić:Putnički:Suzuki:Ignis:Zakazan:[Meho Mehić]
+2022-02-02:Ivo:Ivić:Autobus:Volvo:S60:Otkazan:[Dado Dadić]
+2021-03-05:Huso:Husić:Putnički:Fiat:Panda:Kompletiran:[Meho Mehić, Darko Darkić, Dado Dadić, Lana Lanić]
+2020-09-08:Patak:Patkić:Putnički:Suzuki:Ignis:Kompletiran:[Darko Darkić]
+2020-03-05:Huso:Husić:Putnički:Fiat:Panda:Kompletiran:[Darko Darkić, Mišo Mišić]

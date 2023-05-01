@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane hgap="20.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="660.0" prefWidth="950.0" vgap="8.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <stylesheets>
+        <URL value="@/css/reports.css" />
+    </stylesheets>
+    <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="282.0" minWidth="280.0" prefWidth="282.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="316.0" minWidth="280.0" prefWidth="316.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="275.0" minWidth="244.0" prefWidth="244.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="128.0" minHeight="0.0" prefHeight="2.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="325.0" minHeight="10.0" prefHeight="325.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="286.0" minHeight="10.0" prefHeight="102.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="324.0" minHeight="10.0" prefHeight="113.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Label prefHeight="20.0" prefWidth="1054.0" text="%label" GridPane.columnSpan="3">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Button fx:id="btnValid" alignment="BOTTOM_CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onValid" prefHeight="220.0" prefWidth="210.0" text="%valid" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.rowSpan="2">
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding></Button>
+      <Button fx:id="btnNonValid" alignment="BOTTOM_CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onNonValid" prefHeight="220.0" prefWidth="210.0" text="%non_valid" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.rowSpan="2">
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding></Button>
+      <Button fx:id="btnCalendar" alignment="BOTTOM_CENTER" mnemonicParsing="false" onAction="#onCalendar" prefHeight="220.0" prefWidth="210.0" text="%calendar" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.rowSpan="2" />
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</GridPane>

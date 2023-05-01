@@ -1,0 +1,41 @@
+#btnAddEmployee {
+        -fx-border-color: transparent;
+        -fx-border-width: 0;
+        -fx-background-radius: 0;
+        -fx-background-color: #a6d4fa;
+        -fx-text-fill: rgba(0, 0, 0, 0.87);
+        -fx-background-repeat: no-repeat;
+        -fx-background-position: left;
+        -fx-text-position: left;
+
+}
+#btnDeleteEmployee {
+        -fx-border-color: transparent;
+        -fx-border-width: 0;
+        -fx-background-radius: 0;
+        -fx-background-color: rgba(0, 0, 0, 0.04);
+        -fx-text-fill: rgba(0, 0, 0, 0.87);
+        -fx-background-repeat: no-repeat;
+        -fx-background-position: left;
+        -fx-text-position: left;
+}
+
+#btnEditEmployee {
+        -fx-border-color: transparent;
+        -fx-border-width: 0;
+        -fx-background-radius: 0;
+        -fx-background-color: rgba(0, 0, 0, 0.04);
+        -fx-text-fill: rgba(0, 0, 0, 0.87);
+        -fx-background-repeat: no-repeat;
+        -fx-background-position: left;
+        -fx-text-position: left;
+}
+.valid {
+    -fx-border-color: #81c784;
+}
+.nonvalid {
+    -fx-border-color: #f6a5c0;
+}
+#btnOk {
+    -fx-background-color: #a6d4fa;
+}

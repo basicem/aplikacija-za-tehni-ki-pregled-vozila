@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.16.0.final using JasperReports Library version 6.16.0-48579d909b7943b64690c65c71e07e0b80981928  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Flower_4" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c72f96d9-38c2-435f-af49-97a4a2b29c57">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="687"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DataAdapter3.xml"/>
+	<style name="Title" forecolor="#FFFFFF" fontName="Times New Roman" fontSize="50" isBold="false"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Times New Roman" fontSize="18" isBold="false"/>
+	<style name="Column header" forecolor="#666666" fontName="Times New Roman" fontSize="14" isBold="true"/>
+	<style name="Detail" mode="Transparent" fontName="Times New Roman"/>
+	<style name="Row" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style mode="Opaque" backcolor="#F0EFEF"/>
+		</conditionalStyle>
+	</style>
+	<subDataset name="PieChartDataset" uuid="39581794-7f4c-48d6-8f6a-b421776f515c"/>
+	<queryString language="SQL">
+		<![CDATA[select substr(t.date_of_inspection,1,4) godina, case substr(t.date_of_inspection,6,2)
+ 					when '01' then  'Januar'
+                    when '02' then  'Februar'
+                    when '03' then 'Mart'
+                    when '04' then 'April'
+                    when '05' then 'Maj'
+                    when '06' then 'Juni'
+                    when '07' then 'Juli'
+                    when '08' then 'August'
+                    when '09' then 'Septembar'
+                    when '10' then 'Oktobar'
+                    when '11' then 'Novembar'
+                    else 'Decembar'
+                    end mjesec, count(*) broj_pregleda
+from technical_inspection t
+where t.status_of_technical_inspection ='Kompletiran'
+group by mjesec,godina
+order by godina ASC]]>
+	</queryString>
+	<field name="godina" class="java.lang.Object">
+		<property name="com.jaspersoft.studio.field.name" value="godina"/>
+		<property name="com.jaspersoft.studio.field.label" value="godina"/>
+	</field>
+	<field name="mjesec" class="java.lang.Object">
+		<property name="com.jaspersoft.studio.field.name" value="mjesec"/>
+		<property name="com.jaspersoft.studio.field.label" value="mjesec"/>
+	</field>
+	<field name="broj_pregleda" class="java.lang.Object">
+		<property name="com.jaspersoft.studio.field.name" value="broj_pregleda"/>
+		<property name="com.jaspersoft.studio.field.label" value="broj_pregleda"/>
+	</field>
+	<variable name="total_pregleda" class="java.lang.Integer" resetType="None" incrementType="Report" calculation="Sum">
+		<variableExpression><![CDATA[$F{broj_pregleda}]]></variableExpression>
+	</variable>
+	<background>
+		<band height="802" splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="99" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="-20" y="0" width="597" height="65" forecolor="#006699" backcolor="#8AB8D1" uuid="29f958b3-9df5-4ee0-905e-9fd33029926f"/>
+				<staticText>
+					<reportElement style="Title" x="20" y="0" width="557" height="65" uuid="cf1fabd8-9376-4a95-a65d-c762a7404011"/>
+					<textElement textAlignment="Right">
+						<font size="54" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Pregledana vozila]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="SubTitle" x="358" y="50" width="217" height="29" uuid="7a8ee983-690c-4f4d-9330-42613bd3d628"/>
+					<textElement textAlignment="Right">
+						<font size="22" isBold="false"/>
+					</textElement>
+					<text><![CDATA[MeCARnic]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="27" splitType="Stretch">
+			<frame>
+				<reportElement x="0" y="0" width="555" height="20" uuid="793d06e1-d7cc-4d62-ad99-d289a8ce0026"/>
+				<staticText>
+					<reportElement style="Column header" positionType="Float" x="0" y="0" width="109" height="20" forecolor="#000000" uuid="e01725c7-e5cf-46e3-aa24-572eca978e7a">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="23c1ccc8-2240-42f5-80db-dce18bd7371a"/>
+					</reportElement>
+					<textElement>
+						<font fontName="Times New Roman" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Godina]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" positionType="Float" x="109" y="0" width="109" height="20" forecolor="#000000" uuid="45367515-1093-4d34-929a-133060657c60">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="50e8de52-1f6d-46be-ab56-f59ccfa303bf"/>
+					</reportElement>
+					<textElement>
+						<font fontName="Times New Roman" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Mjesec]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" positionType="Float" x="218" y="0" width="109" height="20" forecolor="#000000" uuid="d4c0530a-32bd-4846-8790-77f4024be05a">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b82620cb-0c94-42c3-89d6-e10d36005fc4"/>
+					</reportElement>
+					<textElement>
+						<font fontName="Times New Roman" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Broj pregleda]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="25" splitType="Stretch">
+			<frame>
+				<reportElement x="0" y="0" width="555" height="20" uuid="dec77cf2-1014-4b3e-9934-7f0c65a83bce"/>
+				<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+					<reportElement style="Detail" positionType="Float" x="0" y="0" width="109" height="18" forecolor="#283182" uuid="ddba2259-ad2e-464e-9221-ee0dc3f0ce99">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="23c1ccc8-2240-42f5-80db-dce18bd7371a"/>
+					</reportElement>
+					<textElement>
+						<font fontName="Times New Roman" size="14" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{godina}]]></textFieldExpression>
+				</textField>
+				<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+					<reportElement style="Detail" positionType="Float" x="109" y="0" width="109" height="18" uuid="6a12ac5d-0d3d-4cfc-9c4a-9e35ac33a919">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="50e8de52-1f6d-46be-ab56-f59ccfa303bf"/>
+					</reportElement>
+					<textElement>
+						<font fontName="Times New Roman" size="14" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{mjesec}]]></textFieldExpression>
+				</textField>
+				<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+					<reportElement style="Detail" positionType="Float" x="218" y="0" width="109" height="18" uuid="697f5868-c10a-4259-8ab7-896c01e1f0f1">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b82620cb-0c94-42c3-89d6-e10d36005fc4"/>
+					</reportElement>
+					<textElement>
+						<font fontName="Times New Roman" size="14" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{broj_pregleda}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement positionType="FixRelativeToBottom" x="-1" y="20" width="555" height="1" uuid="0a05d19c-77ff-48d5-91d6-460d221419e5"/>
+					<graphicElement>
+						<pen lineWidth="0.5" lineColor="#999999"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement positionType="FixRelativeToBottom" x="-1" y="20" width="553" height="1" uuid="1f2efa15-468e-4870-8f24-1cb1eda2034d"/>
+				</line>
+			</frame>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="7" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="13" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="2" y="0" width="555" height="13" forecolor="#D0B48E" backcolor="#006699" uuid="21b8ec89-3912-4f38-b1d2-846c348d496b"/>
+				<textField evaluationTime="Report">
+					<reportElement style="Column header" x="513" y="0" width="40" height="13" forecolor="#FFFFFF" uuid="2f1f4647-386f-4ee9-b3b1-779c70fd7960"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Column header" x="433" y="0" width="80" height="13" forecolor="#FFFFFF" uuid="c50a7647-9d9b-4145-89d7-15adb353fac4"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+				</textField>
+				<textField pattern="EEEEE dd MMMMM yyyy">
+					<reportElement style="Column header" x="2" y="0" width="197" height="13" forecolor="#FFFFFF" uuid="2a75ce15-0152-4154-9a45-a23c6a9d3107"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="46" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+		</band>
+	</summary>
+</jasperReport>

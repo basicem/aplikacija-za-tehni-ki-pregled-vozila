@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="360.0" prefWidth="607.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <stylesheets>
+        <URL value="@/css/home.css" />
+    </stylesheets>
+    <left>
+        <ToolBar fx:id="Hbar" orientation="VERTICAL" prefHeight="325.0" prefWidth="220.0" BorderPane.alignment="CENTER">
+            <items>
+            <Label fx:id="timeLabel" alignment="TOP_LEFT" contentDisplay="RIGHT" nodeOrientation="RIGHT_TO_LEFT" prefHeight="23.0" prefWidth="203.0" text="Label" textAlignment="RIGHT" />
+            <Button fx:id="btnHome" alignment="CENTER_RIGHT" mnemonicParsing="false" onAction="#onHome" prefHeight="25.0" prefWidth="210.0" text="%home" />
+                <Button fx:id="btnTI" alignment="CENTER_RIGHT" mnemonicParsing="false" onAction="#onTI" prefHeight="29.0" prefWidth="210.0" text="%schedule" textAlignment="RIGHT" />
+            <Button fx:id="btnSearch" alignment="CENTER_RIGHT" mnemonicParsing="false" onAction="#onSearch" prefHeight="25.0" prefWidth="210.0" text="%search" />
+                <Button fx:id="btnEmployees" alignment="CENTER_RIGHT" mnemonicParsing="false" onAction="#onEmployees" prefHeight="25.0" prefWidth="210.0" text="%employees" textAlignment="RIGHT" />
+                <Button fx:id="btnReport" alignment="CENTER_RIGHT" mnemonicParsing="false" onAction="#onReport" prefHeight="25.0" prefWidth="210.0" text="%reports" />
+            </items>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <BorderPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </BorderPane.margin>
+        </ToolBar>
+    </left>
+   <top>
+       <ToolBar prefHeight="0.0" prefWidth="607.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+         <MenuBar fx:id="menuBar" prefHeight="30.0" prefWidth="112.0">
+           <menus>
+             <Menu mnemonicParsing="false" text="%file">
+               <items>
+                     <Menu mnemonicParsing="false" text="%language">
+                       <items>
+                         <MenuItem mnemonicParsing="false" onAction="#choiceLanguageEng" text="%eng" />
+                           <MenuItem mnemonicParsing="false" onAction="#choiceLanguageBs" text="%bos" />
+                       </items>
+                     </Menu>
+               </items>
+             </Menu>
+             <Menu mnemonicParsing="false" text="%help">
+               <items>
+                 <MenuItem mnemonicParsing="false" onAction="#onAbout" text="%about" />
+                     <MenuItem mnemonicParsing="false" onAction="#onInfo" text="%info" />
+               </items>
+             </Menu>
+           </menus>
+         </MenuBar>
+           <Pane prefHeight="30.0" prefWidth="300.0" HBox.hgrow="ALWAYS">
+            <padding>
+               <Insets left="-5.0" />
+            </padding></Pane>
+         <MenuBar prefHeight="30.0" prefWidth="122.0">
+           <menus>
+             <Menu mnemonicParsing="false">
+               <items>
+                 <MenuItem mnemonicParsing="false" onAction="#onbtnLogOut" text="%logOut" />
+               </items>
+                  <graphic>
+                     <Button fx:id="btnUser" alignment="TOP_RIGHT" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="22.0" prefWidth="93.0" />
+                  </graphic>
+             </Menu>
+           </menus>
+         </MenuBar>
+         <padding>
+            <Insets left="-5.0" />
+         </padding>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+       </ToolBar>
+   </top>
+</BorderPane>

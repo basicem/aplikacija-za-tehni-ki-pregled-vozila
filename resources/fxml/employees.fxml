@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane hgap="5.0" prefHeight="414.0" prefWidth="1010.0" vgap="10.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <stylesheets>
+      <URL value="@/css/users.css" />
+   </stylesheets>
+   <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="688.0" minWidth="10.0" prefWidth="323.0" />
+      <ColumnConstraints maxWidth="648.0" minWidth="277.0" prefWidth="642.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <ListView fx:id="listEmployees" prefHeight="390.0" prefWidth="363.0" GridPane.rowIndex="1" GridPane.rowSpan="3" />
+      <VBox prefHeight="390.0" prefWidth="272.0" spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.rowSpan="3">
+         <children>
+            <Button fx:id="btnAddEmployee" minHeight="25.0" minWidth="120.0" mnemonicParsing="false" onAction="#addEmployee" prefHeight="25.0" prefWidth="315.0" text="%add_employee" />
+            <Button fx:id="btnDeleteEmployee" minHeight="25.0" minWidth="120.0" mnemonicParsing="false" onAction="#deleteEmployee" prefHeight="25.0" prefWidth="315.0" text="%delete_employee" />
+            <Button fx:id="btnEditEmployee" minHeight="25.0" minWidth="120.0" mnemonicParsing="false" onAction="#updateEmployee" prefHeight="25.0" prefWidth="315.0" text="%edit_employee" />
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </VBox>
+      <Label fx:id="lmain" prefHeight="20.0" prefWidth="977.0" text="%employees" GridPane.columnSpan="2">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</GridPane>

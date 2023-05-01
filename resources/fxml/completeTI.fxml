@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane hgap="20.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="662.0" prefWidth="950.0" vgap="8.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <stylesheets>
+        <URL value="@/css/technicalinspection.css" />
+    </stylesheets>
+    <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="176.0" prefWidth="176.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="300.0" minWidth="0.0" prefWidth="6.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="620.0" minWidth="0.0" prefWidth="127.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="620.0" minWidth="0.0" prefWidth="70.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="620.0" minWidth="10.0" prefWidth="222.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="620.0" minWidth="10.0" prefWidth="116.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="620.0" minWidth="10.0" prefWidth="75.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="125.0" minHeight="0.0" prefHeight="23.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="261.0" minHeight="0.0" prefHeight="24.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="261.0" minHeight="0.0" prefHeight="22.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="249.0" minHeight="0.0" prefHeight="26.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="297.0" minHeight="0.0" prefHeight="25.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="297.0" minHeight="0.0" prefHeight="25.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="297.0" minHeight="0.0" prefHeight="7.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="297.0" minHeight="0.0" prefHeight="20.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="297.0" minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="297.0" minHeight="0.0" prefHeight="22.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="297.0" minHeight="0.0" prefHeight="25.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="297.0" minHeight="0.0" prefHeight="29.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="303.0" minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="303.0" minHeight="10.0" prefHeight="28.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="297.0" minHeight="10.0" prefHeight="173.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+   <children>
+      <ChoiceBox fx:id="choiceEngineType" prefHeight="25.0" prefWidth="206.0" GridPane.rowIndex="3" />
+      <Separator orientation="VERTICAL" prefHeight="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.rowSpan="13" />
+      <Label prefHeight="17.0" prefWidth="316.0" text="%first" textFill="#000000b0" underline="true" GridPane.rowIndex="1" />
+      <Label prefHeight="17.0" prefWidth="637.0" text="%second" textFill="#000000b0" underline="true" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+      <Label text="%choiceEngineType" GridPane.rowIndex="2" />
+      <Label text="%choiceEngineTact" GridPane.rowIndex="4" />
+      <Label text="%choiceGearbox" GridPane.rowIndex="9" />
+      <ChoiceBox fx:id="choiceGearbox" prefHeight="25.0" prefWidth="316.0" GridPane.rowIndex="10" />
+      <Label text="%choiceFuelType" GridPane.rowIndex="7" />
+      <ChoiceBox fx:id="choiceFuelType" prefHeight="25.0" prefWidth="203.0" GridPane.rowIndex="8" />
+      <Separator prefWidth="200.0" GridPane.columnIndex="2" GridPane.columnSpan="5" GridPane.rowIndex="6" />
+      <Label text="%comment" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+      <TextArea fx:id="comment" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.columnSpan="4" GridPane.rowIndex="8" GridPane.rowSpan="4" />
+      <Label text="%validvehicle" GridPane.columnIndex="2" GridPane.rowIndex="12" />
+      <Label text="%price" GridPane.columnIndex="2" GridPane.rowIndex="13" />
+      <HBox prefHeight="100.0" prefWidth="200.0" spacing="13.0" GridPane.columnIndex="3" GridPane.columnSpan="4" GridPane.rowIndex="12">
+         <children>
+            <CheckBox fx:id="checkValid" mnemonicParsing="false" text="%valid" />
+            <CheckBox fx:id="checkInvalid" mnemonicParsing="false" text="%invalid" />
+            <Button fx:id="btnInvalid" mnemonicParsing="false" prefHeight="27.0" prefWidth="130.0" text="%btninvalid" />
+            <Button fx:id="btnValid" mnemonicParsing="false" prefHeight="27.0" prefWidth="130.0" text="%btnvalid" />
+         </children>
+      </HBox>
+      <TextField fx:id="price" prefHeight="25.0" prefWidth="108.0" GridPane.columnIndex="3" GridPane.rowIndex="13" />
+      <ButtonBar prefHeight="201.0" prefWidth="193.0" GridPane.columnIndex="5" GridPane.columnSpan="2" GridPane.rowIndex="14">
+        <buttons>
+          <Button fx:id="btnComplete" mnemonicParsing="false" onAction="#clickComplete" prefHeight="25.0" prefWidth="174.0" text="%complete" />
+        </buttons>
+      </ButtonBar>
+      <Label text="%width" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+      <Label text="%length" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+      <Label text="%height" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+      <TextField fx:id="width" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+      <TextField fx:id="length" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+      <TextField fx:id="height" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+      <ImageView fx:id="dimensions" fitHeight="185.0" fitWidth="230.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowSpan="6" />
+      <Label text="%sit" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+      <Label text="%stand" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+      <Label text="%lay" GridPane.columnIndex="5" GridPane.rowIndex="4" />
+      <TextField fx:id="placesToLieDown" GridPane.columnIndex="6" GridPane.rowIndex="4" />
+      <TextField fx:id="placesToSit" GridPane.columnIndex="6" GridPane.rowIndex="2" />
+      <TextField fx:id="placesToStand" GridPane.columnIndex="6" GridPane.rowIndex="3" />
+      <Label fx:id="main" prefHeight="20.0" prefWidth="916.0" text="%main" GridPane.columnSpan="7">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <GridPane.margin>
+            <Insets />
+         </GridPane.margin>
+      </Label>
+      <Label text="KM" GridPane.columnIndex="4" GridPane.rowIndex="13" />
+      <ChoiceBox fx:id="choiceEngineTact" prefHeight="25.0" prefWidth="203.0" GridPane.rowIndex="5" />
+   </children>
+</GridPane>

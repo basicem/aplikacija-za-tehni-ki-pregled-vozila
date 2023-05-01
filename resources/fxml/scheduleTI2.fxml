@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane hgap="20.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="444.0" prefWidth="900.0" vgap="8.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+  <stylesheets>
+    <URL value="@/css/validationTI.css" />
+  </stylesheets>
+  <columnConstraints>
+    <ColumnConstraints maxWidth="200.0" minWidth="200.0" prefWidth="200.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="442.0" minWidth="0.0" prefWidth="433.0" />
+    <ColumnConstraints />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints />
+    <RowConstraints maxHeight="17.0" minHeight="17.0" prefHeight="17.0" />
+    <RowConstraints vgrow="SOMETIMES" />
+    <RowConstraints vgrow="SOMETIMES" />
+    <RowConstraints vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="27.0" vgrow="SOMETIMES" />
+    <RowConstraints vgrow="SOMETIMES" />
+    <RowConstraints vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="27.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="23.0" minHeight="22.0" prefHeight="23.0" vgrow="SOMETIMES" />
+    <RowConstraints vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="21.0" minHeight="16.0" prefHeight="21.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="9.0" minHeight="4.0" prefHeight="4.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" />
+    <RowConstraints vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" />
+    <RowConstraints vgrow="SOMETIMES" />
+    <RowConstraints vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+    <RowConstraints vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="35.0" minHeight="12.0" prefHeight="12.0" />
+    <RowConstraints vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="27.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="11.0" minHeight="0.0" prefHeight="0.0" />
+      <RowConstraints />
+  </rowConstraints>
+  <children>
+    <Label fx:id="l2" prefHeight="17.0" prefWidth="916.0" text="%second_part" GridPane.columnSpan="3" GridPane.rowIndex="1" />
+    <Label text="%first_name" GridPane.rowIndex="3" />
+    <Label text="%last_name" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+    <Label text="%adress" GridPane.rowIndex="5" />
+    <Label text="%phone_number" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+    <Separator prefHeight="0.0" prefWidth="608.0" GridPane.columnSpan="2" GridPane.rowIndex="8" />
+    <TextField fx:id="fldPhoneNumber" prefHeight="25.0" prefWidth="171.0" promptText="000-000-000" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+    <TextField fx:id="fldLastName" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+    <ButtonBar prefHeight="45.0" prefWidth="420.0" GridPane.columnSpan="3" GridPane.rowIndex="20">
+      <buttons>
+        <Button fx:id="btnOk" mnemonicParsing="false" onAction="#onOkClick" prefHeight="25.0" prefWidth="219.0" text="Ok" />
+      </buttons>
+         <padding>
+            <Insets right="13.0" />
+         </padding>
+    </ButtonBar>
+    <Label prefHeight="17.0" prefWidth="204.0" text="%date" GridPane.rowIndex="10" />
+    <ChoiceBox fx:id="choiceTypeOfTI" prefHeight="25.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+    <Label fx:id="fldWrongPhoneNumber" prefHeight="17.0" prefWidth="202.0" text="%wrong_number" textFill="#e57373" GridPane.columnIndex="1" GridPane.rowIndex="7">
+      <font>
+        <Font size="10.0" />
+      </font></Label>
+      <Label fx:id="l3" prefHeight="17.0" prefWidth="916.0" text="%third_part" GridPane.columnSpan="3" GridPane.rowIndex="9" />
+      <Label text="%type_of_TI" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+      <TextField fx:id="fldAdress" GridPane.rowIndex="6" />
+      <TextField fx:id="fldFirstName" GridPane.rowIndex="4" />
+      <DatePicker fx:id="choiceDate" prefHeight="25.0" prefWidth="200.0" GridPane.rowIndex="11" />
+      <Label fx:id="main" prefHeight="17.0" prefWidth="916.0" text="%main" GridPane.columnSpan="3">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+  </children>
+  <padding>
+    <Insets bottom="20.0" left="20.0" right="-5.0" top="20.0" />
+  </padding>
+</GridPane>
